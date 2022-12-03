@@ -5,7 +5,6 @@ import requests
 
 app = Flask(__name__)
 
-
 def controller_status():
     ram = round(psutil.virtual_memory().total/1000000000, 2)
     return {"status": "server is running", "ram": f"{ram} GB", "operatingSystem": platform.system()}, 200
